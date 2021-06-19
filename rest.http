@@ -1,0 +1,38 @@
+
+
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjQxMDc3NzUsImV4cCI6MTYyNDEwNzgwNSwiYXVkIjoiNjBjZGUzY2UyZTA3YTI3NDk2YzlkMWM2IiwiaXNzIjoiZGlsc2hhbm4ifQ.lIp7VUzwOjFzvSVNUILHQno_wHH86n43bvmOmi31cEs
+
+###
+GET http://localhost:3000/abc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjQxMDYzNTAsImV4cCI6MTYyNDEwOTk1MCwiYXVkIjoiNjBjZGUzY2UyZTA3YTI3NDk2YzlkMWM2IiwiaXNzIjoiZGlsc2hhbm4ifQ.tAagtYpJQIkZwH5DRgMy_yweIeI3PPx6iCNChrw5a6g
+
+### Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"hldniroda@gmail.com",
+    "password" : "123456"
+}
+
+### Register Route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"hldniroda@gmail.com",
+    "password" : "123456"
+}
+
+### refresh token Route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjQxMDkxNTMsImV4cCI6MTY1NTY2Njc1MywiYXVkIjoiNjBjZGUzY2UyZTA3YTI3NDk2YzlkMWM2IiwiaXNzIjoiZGlsc2hhbm4ifQ.7PxLIwupom0uRb5zwEUsH4wx-b9gZ5DZzoqRCB2mUDc"
+}
+
+
+### Logout Route
+DELETE http://localhost:3000/auth/logout
